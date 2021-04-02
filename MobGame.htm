@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en" onclick="jump()">
+<head>
+			 	<link href="style.css" rel="stylesheet" type="text/css">
+				<title>VkSpidy World (Jumping Game)</title>
+				<link href="https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap" rel="stylesheet">
+				<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
+				<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+							<script src="https://kit.fontawesome.com/e0a3be0d24.js" crossorigin="anonymous">
+     </script> 
+				
+			 <meta charset="utf-8">
+     <meta name="auther" content="VkSpidy">
+   <meta name="keywords" content="Online earning game, Online free game, online jumping game, jumping game, bird game">
+     <meta name="discription" centent="Play earn real Prize, Free jumping Bird game by VkSpidy , Easy to play  ">	
+     		
+	<style>
+		@media all and (min-width:768px){
+				section{
+									width:710px;
+									height: 280px;
+									border:1px solid black;
+									margin-left:10vw;
+										}
+						@-webkit-keyframes move{
+								0%{
+										position:relative;
+								
+								left:720px;		
+								}
+								100%{
+										position:relative;
+								
+								left:0px;		
+								}
+				}
+}
+	</style>
+</head>
+<body onclick="playsong()">
+				<header>
+				<h1>VkSpidy <font color="#fff">Game</font></h1>
+				</header>
+				<hr>
+				<div class="game_name">Ja Kabutar Ja</div>
+				<section>
+								<div id="bird" >
+												<img src="bird.gif" alt="Bird" width="40px" height="40px">
+								</div>
+								<div id="tree"><img src="cactus.png" alt="Cactus" width="40px" height="67px"></div>
+				</section>
+					<div id="score_board">
+								Score
+				</div>
+					<div id="final">	Your Final .  
+				<p id="score"></p>
+				</div>
+				<div class="help" style="	position:absolute;top:88%;font-size:1.1rem ;">
+				<a href="index.htm#PlayNow" style="text-decoration:none;background: rgba(200,200,250,0.5);position:absolute;top:88%;font-size:1.1rem ;color:red;"><i class="far fa-clipboard">Instructions</i</a>
+				</div>
+		 <script>
+								var bird = document.getElementById("bird");
+					var tree= document.getElementById("tree");
+						var score = document.getElementById("score_board");
+						var mysong= new Audio();
+					mysong.src="song.mp3";
+								num = 1;
+			
+				function jump() {
+						if(bird.classList !="animate") {
+		bird.classList.add("animate");
+							}	
+							setTimeout(function () {
+											bird.classList.remove("animate")
+							},590);
+							point=			score.innerHTML=(" Score is "+num ++);			
+				}	
+				
+				var checkDead= setInterval(function () {
+								var birdTop = parseInt(window.getComputedStyle(bird).getPropertyValue("top"));
+								var treeLeft = parseInt(window.getComputedStyle(tree).getPropertyValue("left"));
+								if(treeLeft<30 && treeLeft>0 && birdTop>=190) {
+												tree.style.animation = "none";
+												tree.style.display = "none";
+												mysong.pause();
+											// 	alert(point);
+						document.getElementById("final").style.opacity="1";
+												
+															var back = confirm("Want to play again?");
+								if(back==true) {
+												window.open("index.htm");
+								}else{
+												document.getElementById("score").innerHTML =("Ok then",point);
+								}
+								}
+				},10);
+			
+		const playsong = () =>{
+						mysong.play();
+		}				
+								
+				</script> 	
+		
+</body>
+</html>

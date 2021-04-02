@@ -1,0 +1,175 @@
+			*{
+									margin:0;
+									padding:0;
+									box-sizing:border-box;
+									
+					}
+
+					body {
+					width: 100vw;
+					height: 100vh;
+									background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQm97Y3OLfOTYPXxXNbjCd2FDStbZaJg-K1og&usqp=CAU"), url("https://d33wubrfki0l68.cloudfront.net/f9911f02f59d5dea55b81849d258dafea6172bfb/c52a2/images/css/blend-modes/sky.jpg");
+									background-size:cover ;
+		 background-blend-mode: overlay;
+					}
+					header{
+					width: 100vw;
+					text-align:center;
+					font-size:16px ;
+					background: linear-gradient(72deg,#bfffbf,#1a9f92);
+					clip-path: polygon(0 0, 100% 0, 83% 100%, 17% 100%);
+					}
+					header h1{
+							color:#bfffea;
+							posotion:relative;
+							text-shadow:2px 1px 3px #000;
+							font-family: 'Rock Salt', cursive;
+					}
+				header h1::before{
+							content:	"Vk";
+							color:#a6ff2a;
+							position:absolute;
+							
+				}	
+			
+					.game_name{
+									width: 100vw;
+									display:flex;
+									font-size: 1rem;
+									justify-content:center;
+									font-variant:small-caps;
+									font-family: 'Press Start 2P', cursive;
+									color: #ff9e00;
+									text-shadow:2px 1px 1px #000;
+					}
+					
+					section{
+									width:410px;
+									height: 280px;
+									border:1px solid black;
+									overflow:auto;
+									position:relative;
+									background: url("https://i.pinimg.com/originals/bd/33/f1/bd33f119b3d068eb322012e5bc0c109c.gif") no-repeat;
+									background-size:cover;
+									
+								
+					}
+				#bird{
+								width:40px;
+								height: 35px;
+				//	border:1px solid black;
+					justify-content:center;
+					position:absolute;
+								top:250px;
+								left:5px;
+							
+				}	
+				.animate{
+								animation:jump 0.5s 1 linear;
+				}
+				@-webkit-keyframes jump{
+								0%{
+											top:250px;
+								}
+								30%{
+												top: 200px;
+								}
+								60%{
+												top:150px;
+												left:16px;
+								}
+								100%{
+												top:250px;
+												left:22px;
+								}
+				}
+						#tree{
+								width:30px;
+								height: 50px;
+								
+							
+					position:relative;
+								top:230px;
+								left:420px;
+						
+							animation:move 1.5s linear infinite 5s;	
+				}	
+				@-webkit-keyframes move{
+								0%{
+										position:relative;
+								
+								left:420px;		
+								}
+								100%{
+										position:relative;
+								
+								left:0px;		
+								}
+				}
+		#score_board{
+		background: rgba(100,100,100,0.6);
+		font-size: 1.5rem;
+		width: 50%;
+		font-family: 'Orbitron', sans-serif;
+		color: #dbff95;
+		align-items: center;
+			text-shadow:2px 1px 3px #000;
+		border:2px dotted red;
+		border-radius:1rem;
+		
+		}
+			#score{
+							background: ;			
+			}			
+			#final{
+							display: flex;
+							width: 70vw;
+							height:60px;
+							font-variant:small-caps ;
+							font-family: 'Press Start 2P', cursive;
+
+
+							background: rgba(10,90,150,0.4);
+							opacity:0;
+							font-weight:400;
+							text-shadow:2px 1px 5px #000;
+						justify-content:center;
+						align-items: center;
+							color: #fff5d4;
+							position:absolute;
+							top:130px;
+							left:50px;
+							border:5px dashed #983f3f;
+							border-radius: 5%;
+							transition:all 0.5s linear;
+							animation:glow 2s linear infinite;
+			}
+		@-webkit-keyframes glow{
+						0%{
+										border-top-color:#faff00;
+						}
+								30%{
+										border-right-color:#faff00;
+						}
+								60%{
+										border-bottom-color:#faff00;
+						}
+						90%{
+										border-left-color:#faff00;
+		}	
+		
+.help{
+					position:absolute;
+						top:88%;
+						font-size:1.1rem ;
+}		
+.help a{
+						text-decoration:none;
+						background: rgba(200,200,250,0.5);
+						position:absolute;
+						top:88%;
+						font-size:1.1rem ;
+						color:red;
+		}
+		
+
