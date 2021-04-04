@@ -80,16 +80,16 @@
 				var checkDead= setInterval(function () {
 								var birdTop = parseInt(window.getComputedStyle(bird).getPropertyValue("top"));
 								var treeLeft = parseInt(window.getComputedStyle(tree).getPropertyValue("left"));
-								if(treeLeft<30 && treeLeft>0 && birdTop>=190) {
+								if(treeLeft<22 && treeLeft>0 && birdTop>=185) {
 												tree.style.animation = "none";
 												tree.style.display = "none";
 												mysong.pause();
 											// 	alert(point);
 						document.getElementById("final").style.opacity="1";
 												
-															var back = confirm("Want to play again?");
+															var back = confirm("Make 100 score to win prizes,Want to play again?");
 								if(back==true) {
-												window.open("index.htm");
+												window.open("MobGame.htm");
 								}else{
 												document.getElementById("score").innerHTML =("Ok then",point);
 								}
