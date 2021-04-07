@@ -130,11 +130,11 @@
 			}			
 			#final{
 							display: flex;
-							width: 70vw;
-							height:60px;
+							width: 76vw;
+							height:90px;
 							font-variant:small-caps ;
 							font-family: 'Press Start 2P', cursive;
-
+flex-direction:column;
 
 							background: rgba(10,90,150,0.4);
 							opacity:0;
